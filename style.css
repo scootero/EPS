@@ -1,0 +1,556 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --navTxtColor1: rgb(0, 202, 238);
+  --navTxtColor1-hover: rgb(0, 217, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  width: 100%;
+}
+
+.nav-container {
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.top-bar {
+  background-color: white;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1;
+}
+.top-bar span {
+  color: black;
+}
+
+.top-bar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.top-bar li {
+  margin: 0px 25px;
+}
+
+.top-bar a {
+  color: var(--navTxtColor1);
+}
+
+.top-bar a:hover {
+  color: var(--navTxtColor1-hover);
+}
+.top-bar a:hover span {
+  color: var(--navTxtColor1-hover);
+  text-decoration: underline;
+}
+
+.top-bar i {
+  font-size: 26px;
+}
+
+.top-contact-info {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+nav {
+  background: rgba(255, 255, 255, 0.561);
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+nav a {
+  font-size: 24px;
+  color: black;
+}
+
+nav a:hover {
+  color: var(--navTxtColor1-hover);
+  text-decoration: underline;
+}
+.nav-container {
+  width: 100%;
+}
+
+.logo-name:hover {
+  text-decoration: none;
+}
+
+.logo {
+  flex: 1;
+  padding: 15px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.logo a:hover {
+  color: var(--navTxtColor1-hover);
+}
+
+.logo img {
+  width: clamp(70px, 50%, 200px);
+  margin-right: 10px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.menu li {
+  padding: 15px;
+  font-size: 16px;
+}
+
+.menu-bars {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  z-index: 10;
+}
+
+.menu-bars:hover {
+  filter: brightness(140%);
+}
+
+.bars {
+  width: 30px;
+  height: 4px;
+  background-color: var(--navTxtColor1);
+  margin: 8px 0;
+  transition: 0.3s;
+}
+
+/**** MENU BARS ANIMATION ****/
+.change #bar1 {
+  transform: rotate(-45deg) translate(-7px, 10px);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: rotate(45deg) translate(-7px, -10px);
+}
+
+/**** NAV BAR END  ****/
+
+.hero-container {
+  margin-top: 0px;
+  width: 100vw;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-container {
+  width: 100%;
+}
+
+.hero-img img {
+  margin-top: -450px;
+  position: relative;
+  min-width: 1900px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slogan-container {
+  position: relative;
+  z-index: 100;
+  top: 90%;
+  margin-left: 40px;
+  float: right;
+  margin-right: 50px;
+}
+
+.slogan-txt {
+  color: white;
+  font-size: 24px;
+  font-style: italic;
+}
+
+/**** GENERAL SECTIONS ****/
+
+.all-sections-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 0px;
+  background-color: white;
+}
+
+.offer-container {
+  position: relative;
+  display: flex;
+  margin: 30px;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.offer-wrapper {
+  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  height: 300px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.offer-wrapper:hover {
+  box-shadow: none;
+  transition: 0.3s ease-out;
+}
+
+.offer-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.offer-overlay:hover {
+  cursor: pointer;
+  background-color: rgba(0, 221, 255, 0.843);
+}
+
+.offer-overlay:active {
+  background-color: rgba(0, 221, 255, 0.843);
+}
+
+.offer-overlay {
+  user-select: none;
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 221, 255, 0.523);
+  transition: 0.3s;
+}
+
+.offer-overlay .overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.offer-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.all-sections-container {
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+
+/******  ABOUT SECTION *******/
+
+.info-cards-container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  overflow: none;
+  background-color: rgb(222, 222, 222);
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 1;
+}
+
+.info-cards-container2 {
+  background-color: rgba(222, 222, 222, 0.566);
+}
+
+.info-card {
+  border: black solid 1px;
+  width: 40%;
+  height: 90%;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 0px rgb(0, 0, 0);
+}
+
+.info-card .all-you {
+  text-decoration: underline;
+  text-align: center;
+  color: black;
+}
+
+.info-card h3 {
+  margin: 20px 0px;
+}
+
+.info-card h3.h3-center {
+  text-align: center;
+  font-size: 16px;
+}
+.about-card p {
+  font-size: 18px;
+}
+
+.info-card ul {
+  margin: 20px;
+  width: auto;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 40px;
+  line-height: 1.8em;
+}
+.separator-line {
+  width: 80%;
+  height: 4px;
+  border-radius: 30px;
+  background: var(--navTxtColor1);
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.who-location-section .separator-line {
+  max-width: 1000px;
+}
+
+/********************************/
+/****  ABOUT PAGE STYLES ****/
+
+.about-map-container {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-map-card {
+  padding: 20px;
+  width: 50%;
+  height: 500px;
+  border: solid black 1px;
+  overflow: hidden;
+}
+.about-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.about-card h1 {
+  font-size: 1.5em;
+}
+.about-card p {
+  margin: 20px 0px;
+  font-size: 16px;
+}
+.about-card span {
+  color: rgb(255, 132, 0);
+}
+.btn-wrapper {
+  padding: 50px;
+}
+.btn-wrapper a {
+  background-color: coral;
+  padding: 15px 40px;
+  margin: 20px;
+  position: relative;
+}
+
+/***  MAP IMAGE  ***/
+.map-img-wrapper {
+  text-align: center;
+}
+.map-img-wrapper img {
+  position: relative;
+  text-align: center;
+  width: 450px;
+}
+
+/*** END ABOUT PAGE ***/
+/***********************/
+
+/***  page IMAGE STUFF **/
+
+.background-img-containerss {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+
+  z-index: 0;
+}
+.background-img-container img {
+  position: fixed;
+  width: 100%;
+  filter: blur(5px);
+  top: 0px;
+  z-index: 0;
+}
+.thin-img-matte {
+  height: 100%;
+  background-color: black;
+}
+
+/****  CONTACT US STYLES ****/
+
+.contact-container {
+  background: url("https://media.istockphoto.com/photos/water-pumping-station-and-industrial-interior-pipes-picture-id483073519?b=1&k=20&m=483073519&s=170667a&w=0&h=byCTKtX5JnUZPspadbn--7E0toXazvHOGZqHbEe2bws=");
+  margin-top: 20;
+  background-size: 50% fixed;
+  width: 100%;
+}
+
+.contact-container-overlay {
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.782);
+}
+
+.contact-section {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.3);
+  margin: 50px;
+  width: 35%;
+  height: 700px;
+  z-index: 9999;
+  background-color: var(--navTxtColor1);
+}
+
+.contact-section form {
+  margin-top: 50px;
+}
+
+form input,
+textarea {
+  width: 80%;
+  border-radius: 5px;
+  margin: 20px 40px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#submit-btn {
+  margin: 40px;
+  padding: 20px;
+  width: 100px;
+}
+
+.form-header {
+  text-align: center;
+  margin: 20px;
+  color: white;
+}
+
+#submit-btn {
+  font-size: 20px;
+}
+
+/*** END CONTACT PAGE ***/
+
+@media screen and (max-width: 800px) {
+  nav {
+    display: block;
+    position: relative;
+  }
+  nav a {
+    font-size: 16px;
+    font-weight: 1000;
+  }
+  .logo img {
+    width: 80px;
+  }
+
+  .nav-company-name {
+    display: none;
+  }
+
+  .hero-img img {
+    margin-top: -450px;
+  }
+  .menu-bars {
+    right: 1em;
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+
+  .top-contact-info {
+    display: none;
+  }
+
+  .menu-active ~ .menu {
+    display: flex;
+  }
+
+  .offer-container {
+    flex-wrap: wrap;
+  }
+  .offer-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .info-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .about-map-card {
+    width: 100%;
+  }
+  .info-card {
+    width: 80%;
+  }
+
+  .contact-section {
+    width: 80%;
+  }
+
+  .map-img-wrapper img {
+    width: 90%;
+  }
+  .about-card {
+    padding: 30px 10px;
+  }
+}
