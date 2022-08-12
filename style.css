@@ -71,7 +71,7 @@ a:hover {
 }
 
 nav {
-  background: rgba(255, 255, 255, 0.561);
+  background: rgb(255, 255, 255);
   padding: 5px 20px;
   display: flex;
   align-items: center;
@@ -189,21 +189,6 @@ nav a:hover {
   overflow: hidden;
 }
 
-.slogan-container {
-  position: relative;
-  z-index: 100;
-  top: 90%;
-  margin-left: 40px;
-  float: right;
-  margin-right: 50px;
-}
-
-.slogan-txt {
-  color: white;
-  font-size: 24px;
-  font-style: italic;
-}
-
 /**** GENERAL SECTIONS ****/
 
 .all-sections-container {
@@ -212,6 +197,36 @@ nav a:hover {
   height: 100vh;
   margin-top: 0px;
 }
+
+/**  CURRENT PAGE STYLE */
+.current-page-container {
+  width: 100%;
+  /* background-color: var(--imageOverlay); */
+  height: 60px;
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.246),
+    rgba(255, 255, 255, 0.9)
+  );
+  user-select: none;
+}
+.current-page-wrapper {
+  text-align: center;
+  /* color: rgba(0, 0, 0, 0); */
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.213);
+  text-shadow: -0.5px -0.5px 0 rgba(0, 0, 0, 0.088),
+    0.5px -0.5px 0 rgba(0, 0, 0, 0.088), -0.5px 0.5px 0 rgba(0, 0, 0, 0.088),
+    0.5px 0.5px 0 rgba(0, 0, 0, 0.088);
+  user-select: none;
+  padding: 10px;
+}
+
+/* OFFER SECTION */
 
 .offer-container {
   position: relative;
@@ -299,7 +314,7 @@ nav a:hover {
 }
 
 .info-cards-container2 {
-  background-color: var(--imageOverlay);
+  background-color: vear(--imageOverlay);
 }
 
 .info-card {
@@ -443,14 +458,109 @@ a {
 /*** END ABOUT PAGE ***/
 /***********************/
 
-/***  page IMAGE STUFF **/
+/** PRODUCTS PAGE   */
 
-.background-img-container {
-  /* width: 100%;
-  height: 500px;
-  position: absolute;
-  z-index: 0; */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  z-index: 1;
 }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  max-height: 500px;
+  /* width: 100px; */
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 28px;
+  padding: 8px 12px;
+  top: 99%;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/***  page IMAGE STUFF **/
 
 .background-img-container img {
   position: fixed;
@@ -466,14 +576,14 @@ a {
 
 .contact-container {
   background: url("https://media.istockphoto.com/photos/water-pumping-station-and-industrial-interior-pipes-picture-id483073519?b=1&k=20&m=483073519&s=170667a&w=0&h=byCTKtX5JnUZPspadbn--7E0toXazvHOGZqHbEe2bws=");
-  margin-top: 20;
-  background-size: 50% fixed;
+  /* margin-top: 20; */
   width: 100%;
 }
 
 .contact-container-overlay {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   z-index: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.782);
@@ -483,10 +593,10 @@ a {
   border-radius: 10px;
   box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.3);
   margin: 50px;
-  width: 35%;
-  height: 700px;
-  z-index: 9999;
-  background-color: var(--navTxtColor1);
+  width: 200px;
+  height: 500px;
+  z-index: 1s;
+  background-color: rgba(0, 0, 0, 0.395);
 }
 
 .contact-section form {
@@ -495,17 +605,26 @@ a {
 
 form input,
 textarea {
-  width: 80%;
+  width: 90%;
   border-radius: 5px;
-  margin: 20px 40px;
-  padding: 10px;
-  font-size: 20px;
+  margin: 10px 10px;
+  padding: 5px;
+  font-size: 12px;
+  border: none;
+  /* background-color: ; */
+}
+
+form textarea {
+  height: 100px;
 }
 
 #submit-btn {
-  margin: 40px;
-  padding: 20px;
-  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  width: 70%;
+
+  border-radius: 10px;
+  border: none;
 }
 
 .form-header {
