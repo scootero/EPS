@@ -146,7 +146,6 @@ nav a:hover {
 }
 
 .bars {
-
   width: 30px;
   height: 4px;
   background-color: var(--navTxtColor1);
@@ -195,6 +194,15 @@ nav a:hover {
   overflow: hidden;
 }
 
+.slogan-container h1 {
+  position: absolute;
+  z-index: 2;
+  top: 320px;
+  right: 20px;
+  font-style: italic;
+  color: #6efaff75;
+}
+
 /**** GENERAL SECTIONS ****/
 
 .all-sections-container {
@@ -212,9 +220,11 @@ nav a:hover {
   position: relative;
   z-index: 1;
 
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.246),
-      rgba(255, 255, 255, 0.));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.246),
+    rgba(255, 255, 255, 0)
+  );
   user-select: none;
 }
 
@@ -235,7 +245,41 @@ nav a:hover {
   text-shadow: #717171 4px 3px 4px;
 }
 
-/* OFFER SECTION */
+/** TICKER Section */
+.ticker-container {
+  position: relative;
+  z-index: 1;
+}
+.ticker-wrapper {
+  background-color: rgba(255, 255, 255, 0.374);
+  display: flex;
+  justify-content: center;
+}
+.ticker-transition {
+  display: flex;
+  /* transform: translateX(-120%); */
+  animation: tickerAnimation 40s linear infinite;
+  position: relative;
+  /* overflow: scroll; */
+}
+.ticker-transition .ticker-item {
+  margin: auto 40px;
+  padding: 20px;
+}
+.ticker-item img {
+  max-width: 200px;
+}
+
+@keyframes tickerAnimation {
+  0% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/** OFFER SECTION */
 
 .offer-container {
   position: relative;
@@ -289,7 +333,7 @@ nav a:hover {
 
 .offer-overlay .overlay-text {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -311,7 +355,6 @@ nav a:hover {
 /******  ABOUT PAGE *******/
 
 .info-cards-container {
-
   width: 100%;
   height: 500px;
   display: flex;
@@ -332,7 +375,7 @@ nav a:hover {
   /* background-color: white; */
   margin: 20px;
   padding: 20px;
-  background-color: rgba(91, 91, 91, 0.617);
+  background-color: rgba(64, 165, 193, 0.77);
   border-radius: 10px;
   box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, 0.286);
 }
@@ -349,9 +392,11 @@ nav a:hover {
 
 .info-card h3.h3-center {
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
 }
-
+.info-card p {
+  padding: 10px 20px;
+}
 .about-card p {
   font-size: 18px;
 }
@@ -359,8 +404,8 @@ nav a:hover {
 .info-card ul {
   margin: 40px 20px;
   width: auto;
-  background-color: rgb(232, 229, 229);
-  box-shadow: 0 0 8px 8px rgb(232, 229, 229);
+  background-color: rgba(232, 229, 229, 0.32);
+  box-shadow: 0 0 3px 8px rgba(232, 229, 229, 0.536);
   border-radius: 20px;
   padding: 10px;
   padding-left: 40px;
@@ -379,7 +424,6 @@ nav a:hover {
 .who-location-section .separator-line {
   max-width: 1000px;
 }
-
 
 .about-map-container {
   width: 100%;
@@ -430,7 +474,6 @@ a {
 }
 
 .btn-wrapper {
-
   margin: 50px;
 
   position: relative;
@@ -479,7 +522,6 @@ a {
   display: flex;
   overflow: none;
   background-color: var(--darkTransparentBackground);
-  ;
   justify-content: space-evenly;
   padding-top: 100px;
   border-radius: 40px;
@@ -503,15 +545,11 @@ a {
 }
 
 .faq h1::after {
-  content: '';
+  content: "";
   width: 20px;
   height: 2px;
   background-color: white;
-
-
-
 }
-
 
 .faq-wrapper h3 {
   color: var(--navTxtColor1-hover);
@@ -522,10 +560,7 @@ a {
   padding: 10px;
   text-align: center;
   margin-bottom: 40px;
-
-
 }
-
 
 /*** END ABOUT PAGE ***/
 /***********************/
@@ -586,7 +621,7 @@ a {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: var(--waterColor2)
+  background-color: var(--waterColor2);
 }
 
 /* Caption text */
@@ -646,7 +681,6 @@ a {
 .mini-img-container {
   position: relative;
   z-index: 1;
-
 }
 
 .mini-imgs {
@@ -655,10 +689,7 @@ a {
   height: auto;
   background-color: rgba(255, 255, 255, 0.29);
   justify-content: center;
-
-
 }
-
 
 .mini-img {
   /* background-color: rgba(175, 175, 175, 0.386); */
@@ -670,13 +701,12 @@ a {
   margin: 50px auto;
   height: 300px;
   padding: 30px;
-
 }
 
 .mini-img:hover {
   transform: scale(1.05);
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .mini-img h3 {
@@ -693,9 +723,7 @@ a {
   border: rgba(0, 0, 0, 0.228) 3px solid;
 }
 
-
 /** END PRODUCTS PAGE */
-
 
 /***  page IMAGE STUFF **/
 
@@ -712,8 +740,6 @@ a {
 /****  CONTACT US STYLES ****/
 
 .contact-container {
-
-
   width: 100%;
   position: relative;
   z-index: 1;
@@ -736,12 +762,9 @@ a {
   height: 500px;
   z-index: 1s;
   background-color: var(--waterColor1);
-
 }
 
 .contact-section form {
-
-
   width: 80%;
   margin-top: 50px;
   margin: auto;
@@ -767,11 +790,9 @@ form textarea {
 .submit-btn {
   justify-content: space-around;
   display: flex;
-
 }
 
 #submit-btn {
-
   padding: 10px;
   width: 70%;
 
@@ -789,17 +810,31 @@ form textarea {
   font-size: 20px;
 }
 
-/*** END CONTACT PAGE ***/
+.contact-info-card {
+  width: 80%;
+  height: 300px;
+  margin: 80px;
+  color: whitesmoke;
+}
+.contact-info-card p {
+  margin: 40px 30px;
 
+  font-size: 16px;
+}
+
+/*** END CONTACT PAGE ***/
 
 /*** FOOTER */
 .footer {
-
   position: absolute;
   z-index: 1;
   /* background-color: rgba(255, 255, 255, 0.516); */
   /* padding: 20px 0; */
-  background: linear-gradient(0deg, var(--waterColor1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    var(--waterColor1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   /* bottom: 0; */
   width: 100%;
 
@@ -807,11 +842,9 @@ form textarea {
 }
 
 .container {
-
   max-width: 1200px;
   padding: 50px;
   margin: auto;
-
 }
 
 .footer ul {
@@ -837,7 +870,7 @@ form textarea {
 }
 
 .footer-col h4::before {
-  content: '';
+  content: "";
   background-color: var(--waterColor2);
   height: 2px;
   width: 50px;
@@ -850,7 +883,6 @@ form textarea {
 
 .footer-col ul li {
   margin-bottom: 5px;
-
 }
 
 .footer-col ul li a {
@@ -871,7 +903,6 @@ form textarea {
 }
 
 /** END FOOTER */
-
 
 @media screen and (max-width: 700px) {
   nav {
@@ -899,7 +930,6 @@ form textarea {
   .menu-bars {
     right: 1em;
     display: block;
-
   }
 
   .menu {
@@ -910,7 +940,7 @@ form textarea {
     display: none;
   }
 
-  .menu-active~.menu {
+  .menu-active ~ .menu {
     display: flex;
   }
 
@@ -936,7 +966,6 @@ form textarea {
 
   .info-card {
     width: 80%;
-
   }
 
   .contact-section {
@@ -966,5 +995,4 @@ form textarea {
   .mini-img-container {
     display: none;
   }
-
 }
